@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the entire application -->
+    <div class="container">
+        <!-- Header section with application title -->
+        <header class="header">
+            <h1>My To-Do List</h1>
+            <p>Stay organized and get things done!</p>
+        </header>
+
+        <!-- Input section for adding new tasks -->
+        <section class="input-section">
+            <!-- Text input field where users type their tasks -->
+            <input 
+                type="text" 
+                id="taskInput" 
+                class="task-input" 
+                placeholder="Enter a new task..."
+                maxlength="100"
+            >
+            <!-- Button to add the task to the list -->
+            <button id="addTaskBtn" class="add-btn">Add Task</button>
+        </section>
+
+        <!-- Task statistics section -->
+        <section class="stats-section">
+            <div class="stats">
+                <span id="totalTasks">Total: 0</span>
+                <span id="completedTasks">Completed: 0</span>
+                <span id="pendingTasks">Pending: 0</span>
+            </div>
+        </section>
+
+        <!-- Main task list container -->
+        <section class="task-section">
+            <!-- Unordered list that will contain all task items -->
+            <!-- This list will be dynamically populated using JavaScript DOM manipulation -->
+            <ul id="taskList" class="task-list">
+                <!-- Task items will be dynamically inserted here -->
+            </ul>
+            
+            <!-- Empty state message (shown when no tasks exist) -->
+            <div id="emptyState" class="empty-state">
+                <p>No tasks yet. Add one above to get started!</p>
+            </div>
+        </section>
+
+        <!-- Clear all completed tasks section -->
+        <section class="actions-section">
+            <button id="clearCompletedBtn" class="clear-btn">Clear Completed Tasks</button>
+        </section>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

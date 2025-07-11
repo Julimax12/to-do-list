@@ -1,0 +1,259 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(135deg, #929fe9 0%, #013842 100%); */
+  background: url(./back.jpg);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container styling */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(230, 235, 245);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Header section styling */
+.header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* Input section styling */
+.input-section {
+  padding: 30px;
+  display: flex;
+  gap: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.task-input {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+.add-btn {
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+/* Statistics section styling */
+.stats-section {
+  padding: 20px 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stats span {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+/* Task section styling */
+.task-section {
+  min-height: 300px;
+  padding: 20px 0;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual task item styling */
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Completed task styling */
+.task-item.completed {
+  opacity: 0.6;
+  background-color: #f8f9fa;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Task checkbox styling */
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #4facfe;
+}
+
+/* Task text styling */
+.task-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background: #57bdec;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  padding: 60px 30px;
+  color: #6c757d;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Actions section styling */
+.actions-section {
+  padding: 20px 30px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.clear-btn {
+  padding: 12px 24px;
+  background: #62abe7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.clear-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animation for new tasks */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .input-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .task-item {
+    padding: 12px 20px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

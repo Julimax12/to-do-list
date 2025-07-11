@@ -1,0 +1,162 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Complete project documentation",
+      "completed": false,
+      "createdAt": "2024-01-15T09:30:00.000Z",
+      "priority": "high",
+      "category": "work"
+    },
+    {
+      "id": 2,
+      "text": "Buy groceries for the week",
+      "completed": true,
+      "createdAt": "2024-01-14T14:20:00.000Z",
+      "priority": "medium",
+      "category": "personal"
+    },
+    {
+      "id": 3,
+      "text": "Work With Victor on septa project ",
+      "completed": false,
+      "createdAt": "2024-01-13T11:45:00.000Z",
+      "priority": "medium",
+      "category": "health"
+    },
+    {
+      "id": 4,
+      "text": "Review code for team project",
+      "completed": true,
+      "createdAt": "2024-01-12T16:15:00.000Z",
+      "priority": "high",
+      "category": "work"
+    },
+    {
+      "id": 5,
+      "text": "Do My birthday planning with mum ",
+      "completed": false,
+      "createdAt": "2024-01-11T10:00:00.000Z",
+      "priority": "high",
+      "category": "family"
+    },
+    {
+      "id": 6,
+      "text": "Update resume and LinkedIn profile",
+      "completed": false,
+      "createdAt": "2024-01-10T13:30:00.000Z",
+      "priority": "low",
+      "category": "career"
+    },
+    {
+      "id": 7,
+      "text": "Buy Food at Old English",
+      "completed": true,
+      "createdAt": "2024-01-09T08:45:00.000Z",
+      "priority": "low",
+      "category": "personal"
+    },
+    {
+      "id": 8,
+      "text": "Attend Class and Rehearsals on Friday",
+      "completed": false,
+      "createdAt": "2024-01-08T19:20:00.000Z",
+      "priority": "low",
+      "category": "personal"
+    },
+    {
+      "id": 9,
+      "text": "Prepare presentation for Monday meeting",
+      "completed": false,
+      "createdAt": "2024-01-07T15:10:00.000Z",
+      "priority": "high",
+      "category": "work"
+    },
+    {
+      "id": 10,
+      "text": "Exercise for 30 minutes",
+      "completed": true,
+      "createdAt": "2024-01-06T07:00:00.000Z",
+      "priority": "medium",
+      "category": "health"
+    }
+  ],
+  "categories": [
+    {
+      "id": "work",
+      "name": "Work",
+      "color": "#3498db",
+      "icon": "💼"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "color": "#2ecc71",
+      "icon": "🏠"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "color": "#e74c3c",
+      "icon": "🏥"
+    },
+    {
+      "id": "family",
+      "name": "Family",
+      "color": "#f39c12",
+      "icon": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "career",
+      "name": "Career",
+      "color": "#9b59b6",
+      "icon": "📈"
+    }
+  ],
+  "priorities": [
+    {
+      "id": "low",
+      "name": "Low",
+      "color": "#95a5a6",
+      "value": 1
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "color": "#f39c12",
+      "value": 2
+    },
+    {
+      "id": "high",
+      "name": "High",
+      "color": "#e74c3c",
+      "value": 3
+    }
+  ],
+  "settings": {
+    "theme": "light",
+    "defaultCategory": "personal",
+    "defaultPriority": "medium",
+    "showCompletedTasks": true,
+    "sortBy": "createdAt",
+    "sortOrder": "desc"
+  },
+  "statistics": {
+    "totalTasksCreated": 10,
+    "totalTasksCompleted": 4,
+    "averageCompletionTime": "2.5 days",
+    "mostProductiveDay": "Monday",
+    "tasksByCategory": {
+      "work": 3,
+      "personal": 3,
+      "health": 2,
+      "family": 1,
+      "career": 1
+    },
+    "tasksByPriority": {
+      "high": 4,
+      "medium": 3,
+      "low": 3
+    }
+  }
+}
